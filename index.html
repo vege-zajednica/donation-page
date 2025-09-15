@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Carousel CSS -->
     <link rel="stylesheet" href="css/carousel.css">
+    <!-- Modal CSS -->
+    <link rel="stylesheet" href="css/modal.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -59,7 +61,7 @@
                 <p class="mt-5 text-white text-xl md:text-lg mb-8">
                     Pokaži supermarketima da ne podržavaš okrutnost. Supermarketi neće promeniti svoju ponudu dok im ti to ne zatražiš – potpiši peticiju kojom zahtevamo od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja i pokaži da ti je stalo.
                 </p>
-                <button class="btn btn-primary px-8 py-3 text-lg font-semibold">
+                <button id="openModalBtn" class="btn btn-primary px-8 py-3 text-lg font-semibold">
                     Potpisujem
                 </button>
             </div>
@@ -298,6 +300,69 @@
             </p>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="signatureModal" class="modal-overlay hidden">
+        <div class="modal-content bg-white">
+            <div class="modal-header">
+                <h2 class="modal-title">TVOJ PODPIS SPREMINJA SVET</h2>
+                <p class="modal-subtitle">Ako sada ne reagujemo, kokoške će nastaviti da pate. Budi glas kokošaka potpiši odmah i zahtevaj od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja.</p>
+            </div>
+            
+            <form id="signatureForm" class="modal-form">
+                <div class="form-group">
+                    <div class="input-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <input type="text" id="firstName" name="firstName" placeholder="Ime" required>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <input type="text" id="lastName" name="lastName" placeholder="Prezime" required>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <input type="tel" id="phone" name="phone" placeholder="Broj telefona" required>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                
+                <div class="terms-section">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        Slažem se sa opštim uslovima korišćenja
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Potpisujem</button>
+            </form>
+            
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>

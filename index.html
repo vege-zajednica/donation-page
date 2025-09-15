@@ -14,11 +14,13 @@
     
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="css/carousel.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen bg-white">
     <!-- Hero Section -->
     <section id="hero" class="bg-black text-white relative">
         <div class="top-5 left-5 absolute">Slomimo kaveze</div>
@@ -67,28 +69,107 @@
     <section id="ask-yourself" class="bg-white text-black relative max-w-5xl mx-auto">
         <div class="container py-20 flex bg-center bg-no-repeat relative">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
-            <div class="w-full mx-auto text-center min-h-[600px] rounded-lg relative z-10">
-                <div class="relative z-10">
-                    <h1 class="text-2xl md:text-6xl font-bold mb-10">
+            <div class="w-full mx-auto text-center rounded-lg relative z-10">
+                <div class="relative z-10 text-xl">
+                    <p class="text-xl md:text-4xl font-bold mb-10">
                         Imamo pitanje za tebe.
-                    </h1>
-                    <div class="flex flex-col gap-6 items-center max-w-xl mx-auto text-center mb-10">
-                        <div class="text-black text-lg leading-10 border-t-2 border-b-2 border-primary-500 w-full pb-3">
+                    </p>
+                    <div class="flex flex-col gap-6 items-center max-w-2xl mx-auto text-center mb-10">
+                        <div class="text-black text-xl leading-10 border-t-2 border-b-2 border-primary-500 w-full pb-3">
                             Koju cenu bi bio/la spreman/na da platiš da oslobodiš milione koka nosilja iz kaveza?
                         </div>
-                        <div class="text-black text-lg leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
                             Da li bi doprinela/o svojim potpisom?
                         </div>
-                        <div class="text-black text-lg leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
                             Jednokratnom donacijom?
                         </div>
-                        <div class="text-black text-lg leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
                             A mesečnom donacijom?
                         </div>
                     </div>
                 </div>
-                <div>Tvoja mesečna podrška, u iznosu koji ti odrediš, menja sudbinu miliona kokošaka u Srbiji.</div>
-                <div>Da li ti to zvuči razumno?</div>
+                <div class="text-black text-xl">Tvoja mesečna podrška, u iznosu koji ti odrediš, menja sudbinu miliona kokošaka u Srbiji.</div>
+                <div class="text-black text-xl">Da li ti to zvuči razumno?</div>
+            </div>
+        </div>
+    </section>
+    <section id="stories" class="bg-white text-black relative max-w-5xl mx-auto py-20 mb-14">
+        <div class="container mx-auto px-4">
+            <!-- Simple Carousel -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Carousel Container -->
+                <div class="carousel-wrapper relative overflow-hidden rounded-lg bg-white p-8">
+                    <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel-slides">
+                        <!-- Story 1 -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
+                                    <img src="./images/thumb-3.png" alt="0">
+                                </div>
+                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                    Njeno ime? Nema ga. <br>
+                                    Dovedena da proizvodi jaja, ništa više.I to i radi.<br>
+                                    Ali jedva da može da se pomeri. <br>
+                                    Njena krila bole. Noge su joj ranjene.<br>
+                                </blockquote>
+                            </div>
+                        </div>
+                        
+                        <!-- Story 2 -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
+                                    <img src="./images/thumb-3.png" alt="1">
+                                </div>
+                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                    Čezne za svežom travom i čistim vazduhom. <br>
+                                    Ali sve što oseća jeste zadah smrti.<br>
+                                    Sanja o slobodi.<br>
+                                </blockquote>
+                            </div>
+                        </div>
+                        
+                        <!-- Story 3 -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
+                                    <img src="./images/thumb-3.png" alt="2">
+                                </div>
+                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                    Podigne glavu i osloni je na hladne metalne šipke koje je sputavaju.<br>
+                                    Zapita se na tren: hoće li iko doći da me spase iz ove noćne more?<br>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button id="prevBtn" class="carousel-nav-btn absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10" style="min-width: 48px; min-height: 48px;">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <button id="nextBtn" class="carousel-nav-btn absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10" style="min-width: 48px; min-height: 48px;">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Dots Indicator -->
+                <div class="flex justify-center mt-4 space-x-2">
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-primary-500 transition-colors duration-200" data-slide="0"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="1"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="2"></button>
+                </div>
+                <div class="text-2xl max-w-2xl mx-auto mt-16 text-center">
+                    <p><span class="text-primary-500 font-bold">TI</span> možeš da budeš njen heroj.</p>
+                    <p><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da ovo postane protivzakonito.</p>
+                    <p><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da se ispiše istorija.</p>
+                    <p>Sve što je potrebno jeste mala donacija – jednokratna ili mesečna.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -220,5 +301,6 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

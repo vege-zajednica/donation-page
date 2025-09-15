@@ -24,44 +24,47 @@
 </head>
 <body class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section id="hero" class="bg-black text-white relative">
-        <div class="top-5 left-5 absolute">Slomimo kaveze</div>
-        <div class="absolute bg-cover inset-0 opacity-50 bg-no-repeat max-w-screen-2xl mx-auto" style="background-image: url('./images/hero.png');">
+    <section id="hero" class="bg-black text-white relative min-h-screen flex items-center">
+        <div class="top-3 left-3 sm:top-5 sm:left-5 absolute text-sm sm:text-base">Slomimo kaveze</div>
+        <div class="absolute bg-cover inset-0 opacity-50 bg-no-repeat bg-center" style="background-image: url('./images/hero.png');">
             <!-- Background Layer -->
         </div>
-        <div class="container py-20 flex bg-center relative">
-            <div class="w-full mx-auto text-center min-h-[600px] rounded-lg relative z-10">
+        <div class="container py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="w-full mx-auto text-center">
                 <div class="relative z-10">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                        POSTANI <br>
-                        <p class="inline-block border-b-4 border-primary-500">HEROJ</p> KOKA NOSILJA
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+                        POSTANI <br class="sm:hidden">
+                        <span class="block sm:inline">
+                            <span class="inline-block border-b-2 sm:border-b-4 border-primary-500">HEROJ</span> 
+                            <span class="block sm:inline sm:ml-2">KOKA NOSILJA</span>
+                        </span>
                     </h1>
-                    <p class="text-2xl md:text-3xl mb-8 text-white">
-                        SPASI KOKE NOSILJE POTPIŠI PETICIJU <br>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-6 sm:mb-8 text-white leading-relaxed px-2">
+                        SPASI KOKE NOSILJE POTPIŠI PETICIJU <br class="hidden sm:block">
                         I ZAHTEVAJ OD SUPERMARKETA DA IZBACE JAJA IZ KAVEZNOG UZGOJA
                     </p>
-                    <p class="text-white text-xl md:text-2xl mb-8">
+                    <p class="text-white text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 px-2">
                         Da li prepoznaješ sebe u nekoj od ovih rečenica?
                     </p>
-                    <div class="flex flex-col gap-6 items-start max-w-xl mx-auto text-center">
-                        <div class="flex items-start">
-                            <div class="mr-4 font-bold text-black flex items-center justify-center flex-shrink-0" style="background-color: white; border-radius: 50%; width: 40px; height: 40px;">I</div>
-                            <div class="text-white text-lg leading-10">Zaista mi je stalo do životinja.</div>
+                    <div class="flex flex-col gap-4 sm:gap-6 items-start max-w-2xl mx-auto text-left sm:text-center">
+                        <div class="flex items-start w-full">
+                            <div class="mr-3 sm:mr-4 font-bold text-black flex items-center justify-center flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10" style="background-color: white; border-radius: 50%;">I</div>
+                            <div class="text-white text-sm sm:text-base md:text-lg leading-relaxed flex-1">Zaista mi je stalo do životinja.</div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="mr-4 font-bold text-black flex items-center justify-center flex-shrink-0" style="background-color: white; border-radius: 50%; width: 40px; height: 40px;">II</div>
-                            <div class="text-white text-lg leading-10">Kada vidim životinju da pati, imam potrebu da joj pomognem.</div>
+                        <div class="flex items-start w-full">
+                            <div class="mr-3 sm:mr-4 font-bold text-black flex items-center justify-center flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10" style="background-color: white; border-radius: 50%;">II</div>
+                            <div class="text-white text-sm sm:text-base md:text-lg leading-relaxed flex-1">Kada vidim životinju da pati, imam potrebu da joj pomognem.</div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="mr-4 font-bold text-black flex items-center justify-center flex-shrink-0" style="background-color: white; border-radius: 50%; width: 40px; height: 40px;">III</div>
-                            <div class="text-white text-lg leading-10">Želim da dam svoj doprinos za unapređenje prava životinja.</div>
+                        <div class="flex items-start w-full">
+                            <div class="mr-3 sm:mr-4 font-bold text-black flex items-center justify-center flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10" style="background-color: white; border-radius: 50%;">III</div>
+                            <div class="text-white text-sm sm:text-base md:text-lg leading-relaxed flex-1">Želim da dam svoj doprinos za unapređenje prava životinja.</div>
                         </div>
                     </div>
                 </div>
-                <p class="mt-5 text-white text-xl md:text-lg mb-8">
+                <p class="mt-4 sm:mt-5 text-white text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 px-2 leading-relaxed">
                     Pokaži supermarketima da ne podržavaš okrutnost. Supermarketi neće promeniti svoju ponudu dok im ti to ne zatražiš – potpiši peticiju kojom zahtevamo od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja i pokaži da ti je stalo.
                 </p>
-                <button id="openModalBtn" class="btn btn-primary px-8 py-3 text-lg font-semibold">
+                <button id="openModalBtn" class="btn btn-primary px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto">
                     Potpisujem
                 </button>
             </div>
@@ -69,47 +72,46 @@
     </section>
 
     <section id="ask-yourself" class="bg-white text-black relative max-w-5xl mx-auto">
-        <div class="container py-20 flex bg-center bg-no-repeat relative">
-            <div class="absolute inset-0 bg-white bg-opacity-50"></div>
-            <div class="w-full mx-auto text-center rounded-lg relative z-10">
-                <div class="relative z-10 text-xl">
-                    <p class="text-xl md:text-4xl font-bold mb-10">
+        <div class="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+            <div class="w-full mx-auto text-center rounded-lg">
+                <div class="relative z-10">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-8 sm:mb-10 px-2">
                         Imamo pitanje za tebe.
                     </p>
-                    <div class="flex flex-col gap-6 items-center max-w-2xl mx-auto text-center mb-10">
-                        <div class="text-black text-xl leading-10 border-t-2 border-b-2 border-primary-500 w-full pb-3">
+                    <div class="flex flex-col gap-4 sm:gap-6 items-center max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+                        <div class="text-black text-base sm:text-lg md:text-xl leading-relaxed border-t-2 border-b-2 border-primary-500 w-full py-3 px-2">
                             Koju cenu bi bio/la spreman/na da platiš da oslobodiš milione koka nosilja iz kaveza?
                         </div>
-                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-base sm:text-lg md:text-xl leading-relaxed border-b-2 border-primary-500 w-full py-3 px-2">
                             Da li bi doprinela/o svojim potpisom?
                         </div>
-                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-base sm:text-lg md:text-xl leading-relaxed border-b-2 border-primary-500 w-full py-3 px-2">
                             Jednokratnom donacijom?
                         </div>
-                        <div class="text-black text-xl leading-10 border-b-2 border-primary-500 w-full pb-3">
+                        <div class="text-black text-base sm:text-lg md:text-xl leading-relaxed border-b-2 border-primary-500 w-full py-3 px-2">
                             A mesečnom donacijom?
                         </div>
                     </div>
                 </div>
-                <div class="text-black text-xl">Tvoja mesečna podrška, u iznosu koji ti odrediš, menja sudbinu miliona kokošaka u Srbiji.</div>
-                <div class="text-black text-xl">Da li ti to zvuči razumno?</div>
+                <div class="text-black text-base sm:text-lg md:text-xl px-2 mb-2">Tvoja mesečna podrška, u iznosu koji ti odrediš, menja sudbinu miliona kokošaka u Srbiji.</div>
+                <div class="text-black text-base sm:text-lg md:text-xl px-2">Da li ti to zvuči razumno?</div>
             </div>
         </div>
     </section>
-    <section id="stories" class="bg-white text-black relative max-w-5xl mx-auto py-20 mb-14">
-        <div class="container mx-auto px-4">
+    <section id="stories" class="bg-white text-black relative max-w-5xl mx-auto py-12 sm:py-16 md:py-20 mb-8 sm:mb-12 md:mb-14">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Simple Carousel -->
             <div class="relative max-w-4xl mx-auto">
                 <!-- Carousel Container -->
-                <div class="carousel-wrapper relative overflow-hidden rounded-lg bg-white p-8">
+                <div class="carousel-wrapper relative overflow-hidden rounded-lg bg-white p-4 sm:p-6 md:p-8">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel-slides">
                         <!-- Story 1 -->
                         <div class="carousel-slide w-full flex-shrink-0">
                             <div class="flex flex-col items-center text-center">
-                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
-                                    <img src="./images/thumb-3.png" alt="0">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 sm:border-4 shadow-lg mb-4 sm:mb-6">
+                                    <img src="./images/thumb-3.png" alt="0" class="w-full h-full object-cover">
                                 </div>
-                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                <blockquote class="text-sm sm:text-base md:text-lg text-gray-700 italic max-w-2xl px-2 leading-relaxed">
                                     Njeno ime? Nema ga. <br>
                                     Dovedena da proizvodi jaja, ništa više.I to i radi.<br>
                                     Ali jedva da može da se pomeri. <br>
@@ -121,10 +123,10 @@
                         <!-- Story 2 -->
                         <div class="carousel-slide w-full flex-shrink-0">
                             <div class="flex flex-col items-center text-center">
-                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
-                                    <img src="./images/thumb-3.png" alt="1">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 sm:border-4 shadow-lg mb-4 sm:mb-6">
+                                    <img src="./images/thumb-3.png" alt="1" class="w-full h-full object-cover">
                                 </div>
-                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                <blockquote class="text-sm sm:text-base md:text-lg text-gray-700 italic max-w-2xl px-2 leading-relaxed">
                                     Čezne za svežom travom i čistim vazduhom. <br>
                                     Ali sve što oseća jeste zadah smrti.<br>
                                     Sanja o slobodi.<br>
@@ -135,10 +137,10 @@
                         <!-- Story 3 -->
                         <div class="carousel-slide w-full flex-shrink-0">
                             <div class="flex flex-col items-center text-center">
-                                <div class="w-56 h-56 rounded-full overflow-hidden border-4 shadow-lg mb-6">
-                                    <img src="./images/thumb-3.png" alt="2">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 sm:border-4 shadow-lg mb-4 sm:mb-6">
+                                    <img src="./images/thumb-3.png" alt="2" class="w-full h-full object-cover">
                                 </div>
-                                <blockquote class="text-lg text-gray-700 italic max-w-2xl">
+                                <blockquote class="text-sm sm:text-base md:text-lg text-gray-700 italic max-w-2xl px-2 leading-relaxed">
                                     Podigne glavu i osloni je na hladne metalne šipke koje je sputavaju.<br>
                                     Zapita se na tren: hoće li iko doći da me spase iz ove noćne more?<br>
                                 </blockquote>
@@ -148,51 +150,51 @@
                 </div>
                 
                 <!-- Navigation Buttons -->
-                <button id="prevBtn" class="carousel-nav-btn absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10" style="min-width: 48px; min-height: 48px;">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="prevBtn" class="carousel-nav-btn absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
                 
-                <button id="nextBtn" class="carousel-nav-btn absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10" style="min-width: 48px; min-height: 48px;">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="nextBtn" class="carousel-nav-btn absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-gray-300 z-10">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
                 
                 <!-- Dots Indicator -->
                 <div class="flex justify-center mt-4 space-x-2">
-                    <button class="carousel-dot w-3 h-3 rounded-full bg-primary-500 transition-colors duration-200" data-slide="0"></button>
-                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="1"></button>
-                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="2"></button>
+                    <button class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-primary-500 transition-colors duration-200" data-slide="0"></button>
+                    <button class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="1"></button>
+                    <button class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="2"></button>
                 </div>
-                <div class="text-2xl max-w-2xl mx-auto mt-16 text-center">
-                    <p><span class="text-primary-500 font-bold">TI</span> možeš da budeš njen heroj.</p>
-                    <p><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da ovo postane protivzakonito.</p>
-                    <p><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da se ispiše istorija.</p>
+                <div class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mt-8 sm:mt-12 md:mt-16 text-center px-2">
+                    <p class="mb-2"><span class="text-primary-500 font-bold">TI</span> možeš da budeš njen heroj.</p>
+                    <p class="mb-2"><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da ovo postane protivzakonito.</p>
+                    <p class="mb-2"><span class="text-primary-500 font-bold">TI</span> možeš da pomogneš da se ispiše istorija.</p>
                     <p>Sve što je potrebno jeste mala donacija – jednokratna ili mesečna.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="become-hero" class="bg-white text-black relative bg-no-repeat min-h-[300px] max-w-5xl mx-auto" style="background-image: url('./images/become-hero.png');">
-        <div class="container py-20 flex relative">
+    <section id="become-hero" class="bg-white text-black relative bg-no-repeat min-h-[300px] max-w-5xl mx-auto bg-cover bg-center" style="background-image: url('./images/become-hero.png');">
+        <div class="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
-            <div class="w-full mx-auto text-center min-h-[600px] rounded-lg relative z-10">
-                <div class="relative z-10">
-                    <h1 class="text-2xl md:text-4xl font-bold mb-10">
-                        <span class="text-primary-500">3 razloga </span>zašto da postaneš <br>
-                        heroj koka nosilja već danas
+            <div class="w-full mx-auto text-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] rounded-lg relative z-10 flex items-center">
+                <div class="relative z-10 w-full">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 px-2">
+                        <span class="text-primary-500">3 razloga </span>zašto da postaneš <br class="sm:hidden">
+                        <span class="block sm:inline">heroj koka nosilja već danas</span>
                     </h1>
-                    <div class="flex flex-col gap-6 items-center max-w-xl mx-auto text-center mb-10">
-                        <div class="text-black text-xl w-full pb-3 text-left">
+                    <div class="flex flex-col gap-4 sm:gap-6 items-center max-w-2xl mx-auto text-center mb-8 sm:mb-10">
+                        <div class="text-black text-sm sm:text-base md:text-lg lg:text-xl w-full pb-3 px-2 leading-relaxed">
                             Zato što tvoja redovna mesečna donacija šalje snažnu poruku supermarketima u Srbiji da kokoške trpe ogromnu patnju i da potrošači to ne žele da podržavaju.
                         </div>
-                        <div class="text-black text-xl w-full pb-3 text-left">
+                        <div class="text-black text-sm sm:text-base md:text-lg lg:text-xl w-full pb-3 px-2 leading-relaxed">
                             Zato što ti je zaista stalo do životinja i želiš bolju budućnost za njih.
                         </div>
-                        <div class="text-black text-xl w-full pb-3 text-left">
+                        <div class="text-black text-sm sm:text-base md:text-lg lg:text-xl w-full pb-3 px-2 leading-relaxed">
                             Zato što će se zahvaljujući tebi o zaštiti koka nosilja informisati i drugi odlučni borci poput tebe, pa će životinje imati još veću podršku i zaštitu.
                         </div>
                     </div>
@@ -200,167 +202,194 @@
             </div>
         </div>
     </section>
-    <section class="bg-white text-black relative min-h-[400px] max-w-5xl mx-auto">
-        <div class="text-black text-2xl pb-10 text-center font-bold mb-xl">
-            Ti imaš moć da napraviš promenu <br>
-            daj im glas i obećanje da imaju tvoju podršku svakog meseca.
-        </div>
-        <div class="flex max-w-7xl mx-auto justify-center gap-8">
-            <img src="./images/thumb-1.png" alt="Become Hero 2">
-            <img src="./images/thumb-2.png" alt="Become Hero 2">
-            <img src="./images/thumb-3.png" alt="Become Hero 2">
-        </div>
-    </section>
-    <section id="motivation" class="bg-white text-black relative max-w-5xl mx-auto mt-10 min-h-[300px] max-w-5xl">
-        <p class="mx-10 font-bold text-2xl mb-10 text-center">
-            <span class="text-primary-500">Kako tvoja odluka</span> da postaneš donator utiče na živote koka nosilja?
-        </p>
-        <p class="mx-10 text-xl">
-            Ti si ta/taj koja/i životinjama daje glas. Samo ti i tvoje akcije mogu da pokrenu borbu za bolja prava životinja.
-        </p>
-        <p class="mx-10 text-xl">Tvoja mesečna donacija omogućava:</p>
-        <p class="mx-10 inline-block border-b-2 border-primary-500 text-black text-xl my-10 text-left font-bold mb-xl">
-            OSVEŠĆAVANJE JAVNOSTI:
-        </p>
-        <p class="mx-10 text-xl">
-            Potrebno je da ljudi saznaju ono što ti već znaš – da milioni životinja u Srbiji pate. Ali da postoje načini da se to promeni.
-        </p>
-        <p class="mx-10 inline-block border-b-2 border-primary-500 text-black text-xl my-10 text-left font-bold mb-xl">
-            VELIKE I USPEŠNE KAMPANJE:
-        </p>
-        <p class="mx-10 text-xl">
-            Samo zahvaljujući redovnom doniranju moguće je pokrenuti uspešne kampanje. Zato upravo pokrećemo veliku inicijativu koja će ukazati supermarketima da je vreme da na policama više ne budu jaja iz kaveznog uzgoja. Tvoja donacija osigurava da se ova borba ne zaustavi ni na trenutak i da uskoro budemo svedoci promene sveta na bolje.
-        </p>
-        <p class="mx-10 inline-block border-b-2 border-primary-500 text-black text-xl my-10 text-left font-bold mb-xl">
-            NADA U BOLJE SUTRA:
-        </p>
-        <p class="mx-10 text-xl">
-            Svojim postupcima svako može da inspiriše svoje okruženje. Zato je najbolje biti primer, stati u odbranu životinja i biti inspiracija drugima. Sa svakim novim herojem životinje imaju veću podršku u društvu. Upravo tako se postižu promene.
-        </p>
-    </section>
-    <section id="faq" class="text-xl pt-24 max-w-5xl mx-auto max-w-5xl">
-        <p class="mx-10 text-2xl font-bold mb-11 text-center">FAQ</p>
-        
-        <div class="mb-11">
-            <p class="mx-10 font-bold mb-3">Zašto treba da se pridružim herojima koka odmah sada?</p>
-            <p class="mx-10">Jaja iz kaveza i dalje pune rafove naših supermarketa.</p>
-            <p class="mx-10">Iza svake kutije krije se život kokoške zatvorene u skučenom prostoru, bez sunca i slobode kretanja.</p>
-            <p class="mx-10">Ljudi u Srbiji konzumiraju skrivenu patnju, bol i okrutnost.</p>
-            <p class="mx-10">
-                Milioni koka nosilja u Srbiji su i dalje zbijeni u žičanim kavezima. Ovi kavezi su smešteni u tamnim halama, gde svaka kokoška ima prostor manji od papira A4 formata. Kokoške u takvim uslovima ne mogu da se kreću, šire krila, niti da izbegnu trajne povrede od stajanja na žičanim površinama.
-            </p>
-            <p class="mx-10">
-                Ovo je tvoja prilika da pomogneš kokoškama. Potpiši peticiju i zahtevaj od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja.
-            </p>
-        </div>
-        
-        <div class="mb-11">
-            <p class="mx-10 font-bold mb-3">Da li koke nosilje u kavezima pate?</p>
-            <p class="mx-10">
-                Da. Koke nosilje svakodnevno prolaze kroz pakao kaveznog uzgoja. Njihov život je obeležen stalnim stresom, fizičkim bolom, strahom i dubokom frustracijom jer su zatvorene u skučen prostor gde im je svaki pokret ograničen.
-            </p>
-            <p class="mx-10">
-                U kavezu ne mogu da urade ono što je za njih najprirodnije i najvažnije – da se kreću, protegnu, da zamahnu krilima, da očiste perje u pesku, da tragaju za hranom i istražuju okolinu. Umesto slobode, imaju samo metalne rešetke. Umesto zemlje pod nogama – hladnu žicu.
-            </p>
-            <p class="mx-10">
-                Kada im se uskrati mogućnost da izraze svoje prirodno ponašanje, one doživljavaju duboki stres. Frustracija nema gde da izađe, pa se često preusmerava na druge koke u jatu. Tada nastupa brutalna posledica: čupanje perja, bolne rane, krvave povrede. Sve to samo zato što im je uskraćeno ono što bi svako živo biće trebalo da ima – pravo na dostojanstven život.
-            </p>
-            <p class="mx-10">
-                To nije život. To je tiha patnja miliona kokošaka, zatvorenih u kavezima širom Srbije, čije se muke kriju iza običnog pakovanja jaja na polici supermarketa.
-            </p>
-        </div>
-        
-        <div class="mb-11">
-            <p class="mx-10 font-bold mb-3">Na koji način moja mesečna donacija pomaže životinjama?</p>
-            <p class="mx-10">
-                Tvoja donacija omogućava da borba za životinje ne staje. Dugoročna borba zahteva stalnu podršku. Bez ljudi poput tebe ne bi bilo moguće realizovati uspešne kampanje koje menjaju sudbine miliona životinja. Pokloni životinjama svoj glas i postani redovni donator.
-            </p>
-        </div>
-        
-        <div class="mb-11">
-            <p class="mx-10 font-bold mb-3">Šta ako se još ne osećam spremno za redovnu donaciju?</p>
-            <p class="mx-10">
-                Naravno, možeš poslati i jednokratnu donaciju. Ali upravo redovna podrška omogućava da se borba za prava životinja vodi kontinuirano i dugoročno. Iznos donacije u potpunosti zavisi od tebe. Efikasnije je slati manji iznos redovno nego veći jednokratno. Tvoja mesečna donacija ti takođe omogućava da svakodnevno živiš svoje vrednosti i uživaš u osećaju da stojiš uz životinje.
-            </p>
-        </div>
-        
-        <div class="mb-11">
-            <p class="mx-10 font-bold mb-3">Šta ako ne mogu ili ne želim da doniram?</p>
-            <p class="mx-10">
-                Ako želiš da pomogneš životinjama, možeš pomoći tako što ćete informisati nove heroje i deliti ovu stranicu sa svojim prijateljima. Možeš da kažeš svima koje poznaješ o ovome i tako uticati na njih. Možeš reći ne jajima iz kaveznog uzgoja. Možeš nam pisati na mejl i postati naš/a volonter/ka. Tvoja želja da budeš heroj kokama se može izraziti na mnogo načina – piši nam da vidimo koji su najefektniji!
-            </p>
+    <section class="bg-white text-black relative min-h-[300px] max-w-5xl mx-auto">
+        <div class="container py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+            <div class="text-black text-lg sm:text-xl md:text-2xl pb-6 sm:pb-8 md:pb-10 text-center font-bold mb-8 sm:mb-12 px-2">
+                Ti imaš moć da napraviš promenu <br class="sm:hidden">
+                <span class="block sm:inline">daj im glas i obećanje da imaju tvoju podršku svakog meseca.</span>
+            </div>
+            <div class="flex flex-col sm:flex-row max-w-6xl mx-auto justify-center gap-4 sm:gap-6 md:gap-8">
+                <img src="./images/thumb-1.png" alt="Become Hero 1" class="w-full sm:w-1/3 h-auto object-cover rounded-lg shadow-md">
+                <img src="./images/thumb-2.png" alt="Become Hero 2" class="w-full sm:w-1/3 h-auto object-cover rounded-lg shadow-md">
+                <img src="./images/thumb-3.png" alt="Become Hero 3" class="w-full sm:w-1/3 h-auto object-cover rounded-lg shadow-md">
+            </div>
         </div>
     </section>
-    <section id="donate" class="bg-white text-black relative max-w-5xl mx-auto mt-10 min-h-[300px] max-w-5xl">
-        <p class="mx-10 text-2xl font-bold mb-11 text-center">DONACIJE</p>
-        <p class="mx-10 text-xl font-bold text-center"><span class="text-primary-500">Ti si ta/j</span> čija redovna donacija menja sudbinu koka nosilja u Srbiji na bolje.</p>
-        <div class="flex justify-center items-center max-w-xl mx-auto text-center mb-10 bg-primary-500 mt-20 min-h-60 text-white">
-            <p>
-                FROMA DONACIJE
+    <section id="motivation" class="bg-white text-black relative max-w-5xl mx-auto mt-8 sm:mt-10 min-h-[300px]">
+        <div class="container py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+            <p class="font-bold text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-center px-2">
+                <span class="text-primary-500">Kako tvoja odluka</span> da postaneš donator utiče na živote koka nosilja?
             </p>
+            <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 px-2">
+                Ti si ta/taj koja/i životinjama daje glas. Samo ti i tvoje akcije mogu da pokrenu borbu za bolja prava životinja.
+            </p>
+            <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 px-2">Tvoja mesečna donacija omogućava:</p>
+            
+            <div class="space-y-6 sm:space-y-8 md:space-y-10">
+                <div class="px-2">
+                    <p class="inline-block border-b-2 border-primary-500 text-black text-base sm:text-lg md:text-xl my-4 sm:my-6 md:my-8 text-left font-bold">
+                        OSVEŠĆAVANJE JAVNOSTI:
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                        Potrebno je da ljudi saznaju ono što ti već znaš – da milioni životinja u Srbiji pate. Ali da postoje načini da se to promeni.
+                    </p>
+                </div>
+                
+                <div class="px-2">
+                    <p class="inline-block border-b-2 border-primary-500 text-black text-base sm:text-lg md:text-xl my-4 sm:my-6 md:my-8 text-left font-bold">
+                        VELIKE I USPEŠNE KAMPANJE:
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                        Samo zahvaljujući redovnom doniranju moguće je pokrenuti uspešne kampanje. Zato upravo pokrećemo veliku inicijativu koja će ukazati supermarketima da je vreme da na policama više ne budu jaja iz kaveznog uzgoja. Tvoja donacija osigurava da se ova borba ne zaustavi ni na trenutak i da uskoro budemo svedoci promene sveta na bolje.
+                    </p>
+                </div>
+                
+                <div class="px-2">
+                    <p class="inline-block border-b-2 border-primary-500 text-black text-base sm:text-lg md:text-xl my-4 sm:my-6 md:my-8 text-left font-bold">
+                        NADA U BOLJE SUTRA:
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                        Svojim postupcima svako može da inspiriše svoje okruženje. Zato je najbolje biti primer, stati u odbranu životinja i biti inspiracija drugima. Sa svakim novim herojem životinje imaju veću podršku u društvu. Upravo tako se postižu promene.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="text-base sm:text-lg md:text-xl pt-12 sm:pt-16 md:pt-20 lg:pt-24 max-w-5xl mx-auto">
+        <div class="container px-4 sm:px-6 lg:px-8">
+            <p class="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 md:mb-11 text-center">FAQ</p>
+            
+            <div class="space-y-8 sm:space-y-10 md:space-y-11">
+                <div class="px-2">
+                    <p class="font-bold mb-3 text-base sm:text-lg md:text-xl">Zašto treba da se pridružim herojima koka odmah sada?</p>
+                    <div class="space-y-2 sm:space-y-3">
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">Jaja iz kaveza i dalje pune rafove naših supermarketa.</p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">Iza svake kutije krije se život kokoške zatvorene u skučenom prostoru, bez sunca i slobode kretanja.</p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">Ljudi u Srbiji konzumiraju skrivenu patnju, bol i okrutnost.</p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            Milioni koka nosilja u Srbiji su i dalje zbijeni u žičanim kavezima. Ovi kavezi su smešteni u tamnim halama, gde svaka kokoška ima prostor manji od papira A4 formata. Kokoške u takvim uslovima ne mogu da se kreću, šire krila, niti da izbegnu trajne povrede od stajanja na žičanim površinama.
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            Ovo je tvoja prilika da pomogneš kokoškama. Potpiši peticiju i zahtevaj od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="px-2">
+                    <p class="font-bold mb-3 text-base sm:text-lg md:text-xl">Da li koke nosilje u kavezima pate?</p>
+                    <div class="space-y-2 sm:space-y-3">
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            Da. Koke nosilje svakodnevno prolaze kroz pakao kaveznog uzgoja. Njihov život je obeležen stalnim stresom, fizičkim bolom, strahom i dubokom frustracijom jer su zatvorene u skučen prostor gde im je svaki pokret ograničen.
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            U kavezu ne mogu da urade ono što je za njih najprirodnije i najvažnije – da se kreću, protegnu, da zamahnu krilima, da očiste perje u pesku, da tragaju za hranom i istražuju okolinu. Umesto slobode, imaju samo metalne rešetke. Umesto zemlje pod nogama – hladnu žicu.
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            Kada im se uskrati mogućnost da izraze svoje prirodno ponašanje, one doživljavaju duboki stres. Frustracija nema gde da izađe, pa se često preusmerava na druge koke u jatu. Tada nastupa brutalna posledica: čupanje perja, bolne rane, krvave povrede. Sve to samo zato što im je uskraćeno ono što bi svako živo biće trebalo da ima – pravo na dostojanstven život.
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                            To nije život. To je tiha patnja miliona kokošaka, zatvorenih u kavezima širom Srbije, čije se muke kriju iza običnog pakovanja jaja na polici supermarketa.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="px-2">
+                    <p class="font-bold mb-3 text-base sm:text-lg md:text-xl">Na koji način moja mesečna donacija pomaže životinjama?</p>
+                    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                        Tvoja donacija omogućava da borba za životinje ne staje. Dugoročna borba zahteva stalnu podršku. Bez ljudi poput tebe ne bi bilo moguće realizovati uspešne kampanje koje menjaju sudbine miliona životinja. Pokloni životinjama svoj glas i postani redovni donator.
+                    </p>
+                </div>
+                
+                <div class="px-2">
+                    <p class="font-bold mb-3 text-base sm:text-lg md:text-xl">Šta ako se još ne osećam spremno za redovnu donaciju?</p>
+                    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                        Naravno, možeš poslati i jednokratnu donaciju. Ali upravo redovna podrška omogućava da se borba za prava životinja vodi kontinuirano i dugoročno. Iznos donacije u potpunosti zavisi od tebe. Efikasnije je slati manji iznos redovno nego veći jednokratno. Tvoja mesečna donacija ti takođe omogućava da svakodnevno živiš svoje vrednosti i uživaš u osećaju da stojiš uz životinje.
+                    </p>
+                </div>
+                
+                <div class="px-2">
+                    <p class="font-bold mb-3 text-base sm:text-lg md:text-xl">Šta ako ne mogu ili ne želim da doniram?</p>
+                    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                        Ako želiš da pomogneš životinjama, možeš pomoći tako što ćete informisati nove heroje i deliti ovu stranicu sa svojim prijateljima. Možeš da kažeš svima koje poznaješ o ovome i tako uticati na njih. Možeš reći ne jajima iz kaveznog uzgoja. Možeš nam pisati na mejl i postati naš/a volonter/ka. Tvoja želja da budeš heroj kokama se može izraziti na mnogo načina – piši nam da vidimo koji su najefektniji!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="donate" class="bg-white text-black relative max-w-5xl mx-auto mt-8 sm:mt-10 min-h-[300px]">
+        <div class="container py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+            <p class="text-lg sm:text-xl md:text-2xl font-bold mb-8 sm:mb-10 md:mb-11 text-center px-2">DONACIJE</p>
+            <p class="text-base sm:text-lg md:text-xl font-bold text-center px-2 mb-8 sm:mb-10">
+                <span class="text-primary-500">Ti si ta/j</span> čija redovna donacija menja sudbinu koka nosilja u Srbiji na bolje.
+            </p>
+            <div class="flex justify-center items-center max-w-2xl mx-auto text-center mb-8 sm:mb-10 bg-primary-500 mt-12 sm:mt-16 md:mt-20 min-h-48 sm:min-h-56 md:min-h-60 text-white rounded-lg">
+                <p class="text-lg sm:text-xl md:text-2xl font-semibold px-4">
+                    FROMA DONACIJE
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Modal -->
     <div id="signatureModal" class="modal-overlay hidden">
-        <div class="modal-content bg-white">
-            <div class="modal-header">
-                <h2 class="modal-title">TVOJ PODPIS SPREMINJA SVET</h2>
-                <p class="modal-subtitle">Ako sada ne reagujemo, kokoške će nastaviti da pate. Budi glas kokošaka potpiši odmah i zahtevaj od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja.</p>
+        <div class="modal-content bg-white w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-5/12 max-w-2xl mx-4 sm:mx-6 md:mx-8">
+            <div class="modal-header p-4 sm:p-6">
+                <h2 class="modal-title text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">TVOJ PODPIS SPREMINJA SVET</h2>
+                <p class="modal-subtitle text-sm sm:text-base md:text-lg leading-relaxed">Ako sada ne reagujemo, kokoške će nastaviti da pate. Budi glas kokošaka potpiši odmah i zahtevaj od supermarketa da prestanu da prodaju jaja iz kaveznog uzgoja.</p>
             </div>
             
-            <form id="signatureForm" class="modal-form">
-                <div class="form-group">
+            <form id="signatureForm" class="modal-form p-4 sm:p-6">
+                <div class="form-group mb-4 sm:mb-6">
                     <div class="input-icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="icon w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </div>
-                    <input type="text" id="firstName" name="firstName" placeholder="Ime" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Ime" required class="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base">
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group mb-4 sm:mb-6">
                     <div class="input-icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="icon w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </div>
-                    <input type="text" id="lastName" name="lastName" placeholder="Prezime" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Prezime" required class="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base">
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group mb-4 sm:mb-6">
                     <div class="input-icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="icon w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
                     </div>
-                    <input type="tel" id="phone" name="phone" placeholder="Broj telefona" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Broj telefona" required class="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base">
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group mb-4 sm:mb-6">
                     <div class="input-icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="icon w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                     </div>
-                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required class="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base">
                 </div>
                 
-                <div class="terms-section">
-                    <label class="terms-checkbox">
+                <div class="terms-section mb-6 sm:mb-8">
+                    <label class="terms-checkbox text-sm sm:text-base">
                         <input type="checkbox" id="terms" name="terms" required>
                         <span class="checkmark"></span>
                         Slažem se sa opštim uslovima korišćenja
                     </label>
                 </div>
                 
-                <button type="submit" class="submit-btn">Potpisujem</button>
+                <button type="submit" class="submit-btn w-full py-3 sm:py-4 text-sm sm:text-base font-semibold">Potpisujem</button>
             </form>
             
-            <button class="modal-close" id="closeModal">&times;</button>
+            <button class="modal-close text-2xl sm:text-3xl md:text-4xl" id="closeModal">&times;</button>
         </div>
     </div>
 

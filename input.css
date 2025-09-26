@@ -5,11 +5,16 @@
 /* Custom styles */
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Bitter', serif !important;
   }
   
   body {
     @apply text-gray-900 bg-white;
+    font-family: 'Bitter', serif !important;
+  }
+  
+  * {
+    font-family: 'Bitter', serif !important;
   }
 }
 

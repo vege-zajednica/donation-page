@@ -1,0 +1,95 @@
+/* FAQ Collapsible Styles */
+.faq-question {
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(219, 106, 28, 0.8) !important;
+}
+
+.faq-answer {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.faq-answer.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+
+.faq-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Donorbox styling */
+.donorbox-container {
+    width: 100%;
+    max-width: 500px;
+    min-width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Better scaling for 4K displays */
+@media (min-width: 1920px) {
+    .donorbox-container {
+        max-width: 600px;
+    }
+    
+    .container {
+        max-width: 1400px !important;
+    }
+    
+    #hero .container {
+        max-width: 1600px !important;
+    }
+}
+
+.donorbox-container iframe {
+    border-radius: 8px;
+}
+
+/* Donation Button */
+.donate-btn {
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Sticky state */
+.donate-btn.sticky {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin: 0;
+    /* Keep original padding and font size */
+    padding: 16px 48px;
+    font-size: 1.125rem;
+}
+
+.donate-btn.sticky:hover {
+    transform: translateX(-50%) translateY(-2px);
+}
+
+/* Thank you section styling */
+#thank-you {
+    /* Background scrolls normally with content */
+    background-size: auto 100% !important;
+}

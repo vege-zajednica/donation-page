@@ -81,7 +81,7 @@
     margin: 0;
     /* Keep original padding and font size */
     padding: 16px 48px;
-    font-size: 1.125rem;
+    font-size: 1.5rem; /* Match text-2xl class */
 }
 
 .donate-btn.sticky:hover {

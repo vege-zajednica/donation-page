@@ -79,9 +79,20 @@
     transform: translateX(-50%);
     z-index: 1000;
     margin: 0;
-    /* Keep original padding and font size */
-    padding: 16px 48px;
-    font-size: 1.5rem; /* Match text-2xl class */
+    /* Responsive sizing for sticky state */
+    width: 16rem; /* w-64 */
+    height: 4rem; /* h-16 */
+    padding: 12px 32px; /* px-8 py-3 */
+    font-size: 1.125rem; /* text-lg */
+}
+
+@media (min-width: 640px) {
+    .donate-btn.sticky {
+        width: 18rem; /* w-72 */
+        height: 5rem; /* h-20 */
+        padding: 16px 48px; /* px-12 py-4 */
+        font-size: 1.5rem; /* text-2xl */
+    }
 }
 
 .donate-btn.sticky:hover {
@@ -92,4 +103,73 @@
 #thank-you {
     /* Background scrolls normally with content */
     background-size: auto 100% !important;
+}
+
+/* Chicken Runner Animation */
+.chicken-runner {
+    position: absolute;
+    z-index: 10;
+    animation: chicken-run 4s ease-in-out infinite;
+    transform: translateX(-50%);
+    left: 10%;
+    top: 50%;
+    margin-top: 20px;
+    width: 60px;
+    height: 40px;
+}
+
+.chicken-runner img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    animation: chicken-bounce 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes chicken-bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes chicken-run {
+    0% {
+        left: 10%;
+        transform: translateX(-50%) scaleX(-1);
+    }
+    45% {
+        left: 90%;
+        transform: translateX(-50%) scaleX(-1);
+    }
+    50% {
+        left: 90%;
+        transform: translateX(-50%) scaleX(1);
+    }
+    95% {
+        left: 10%;
+        transform: translateX(-50%) scaleX(1);
+    }
+    100% {
+        left: 10%;
+        transform: translateX(-50%) scaleX(-1);
+    }
+}
+
+/* Responsive chicken animation */
+@media (max-width: 640px) {
+    .chicken-runner {
+        width: 45px;
+        height: 30px;
+        margin-top: -15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chicken-runner {
+        width: 75px;
+        height: 50px;
+        margin-top: -25px;
+    }
 }

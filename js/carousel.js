@@ -5,44 +5,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('nextBtn');
     const dots = document.querySelectorAll('.carousel-dot');
     
-    let currentSlide = 0;
-    const totalSlides = 3; // Number of slides
+    let currentSlide = 1; // Start at the first real slide (index 1)
+    const totalSlides = 3; // Number of real slides
     
     // Function to update carousel position
     function updateCarousel() {
         const translateX = -currentSlide * 100;
         slides.style.transform = `translateX(${translateX}%)`;
         
-        // Update dots
+        // Update dots based on real slide position
+        const realSlideIndex = getRealSlideIndex();
         dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-                dot.classList.remove('bg-gray-300');
+            if (index === realSlideIndex) {
+                dot.classList.remove('bg-gray-500');
                 dot.classList.add('bg-primary-500');
             } else {
                 dot.classList.remove('bg-primary-500');
-                dot.classList.add('bg-gray-300');
+                dot.classList.add('bg-gray-500');
             }
         });
-        
-        // Update progress bar
-        const progress = ((currentSlide + 1) / totalSlides) * 100;
+    }
+    
+    // Get the real slide index (0, 1, or 2)
+    function getRealSlideIndex() {
+        if (currentSlide === 0) return 2; // Duplicate of last slide
+        if (currentSlide === 4) return 0; // Duplicate of first slide
+        return currentSlide - 1; // Real slides are at indices 1, 2, 3
     }
     
     // Next slide function
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
+        currentSlide++;
+        if (currentSlide === 4) {
+            // We're at the duplicate of the first slide, jump back to real first slide
+            currentSlide = 1;
+        }
         updateCarousel();
     }
     
     // Previous slide function
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        currentSlide--;
+        if (currentSlide === 0) {
+            // We're at the duplicate of the last slide, jump to real last slide
+            currentSlide = 3;
+        }
         updateCarousel();
     }
     
     // Go to specific slide
     function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
+        currentSlide = slideIndex + 1; // Real slides start at index 1
         updateCarousel();
     }
     
@@ -64,8 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Auto-play removed as requested
-    
-    // Initialize carousel
+    // Initialize carousel at the first real slide
     updateCarousel();
 });

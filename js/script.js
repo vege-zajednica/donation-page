@@ -16,6 +16,7 @@ function toggleFaq(questionElement) {
 
 // Initialize FAQ sections to be collapsed by default
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded - version 20241201-001');
     const faqAnswers = document.querySelectorAll('.faq-answer');
     const faqArrows = document.querySelectorAll('.faq-arrow');
     
@@ -34,10 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // Sticky Donation Button functionality
 function initStickyDonationButton() {
     const donateBtn = document.getElementById('stickyDonateBtn');
-    const thankYouSection = document.getElementById('thank-you');
     const donorboxContainer = document.querySelector('.donorbox-container');
     
-    if (!donateBtn || !thankYouSection || !donorboxContainer) {
+    if (!donateBtn) {
+        console.log('Sticky donate button not found');
+        return;
+    }
+    
+    if (!donorboxContainer) {
+        console.log('Donorbox container not found');
         return;
     }
     

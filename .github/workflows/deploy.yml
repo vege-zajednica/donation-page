@@ -1,23 +1,46 @@
-name: Deploy to GitHub Pages
+name: Deploy to cPanel via FTP
 
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  workflow_dispatch:
 
 jobs:
+  check-secrets:
+    runs-on: ubuntu-latest
+    outputs:
+      secrets-valid: ${{ steps.check.outputs.valid }}
+    steps:
+    - name: Check required secrets
+      id: check
+      run: |
+        echo "Checking required secrets..."
+        
+        if [ -z "${{ secrets.FTP_SERVER }}" ]; then
+          echo "❌ FTP_SERVER secret is not set"
+          echo "valid=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+        
+        if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
+          echo "❌ FTP_USERNAME secret is not set"
+          echo "valid=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+        
+        if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+          echo "❌ FTP_PASSWORD secret is not set"
+          echo "valid=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+        
+        echo "✅ All required secrets are set"
+        echo "valid=true" >> $GITHUB_OUTPUT
+
   deploy:
     runs-on: ubuntu-latest
+    needs: check-secrets
+    if: needs.check-secrets.outputs.secrets-valid == 'true'
     
     steps:
     - name: Checkout
@@ -35,16 +58,44 @@ jobs:
     - name: Build CSS
       run: npm run build-css-prod
       
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: '.'
+    - name: Create deployment directory
+      run: |
+        mkdir -p deploy
         
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    - name: Copy production files
+      run: |
+        # Copy essential files for production
+        cp index.html deploy/
+        cp favicon.png deploy/
+        cp -r css deploy/
+        cp -r js deploy/
+        cp -r images deploy/
+        cp -r thank-you deploy/
+        
+        # Remove any development files that might have been copied
+        find deploy -name "*.map" -delete
+        find deploy -name "*.log" -delete
+        
+    - name: Deploy to cPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./deploy/
+        server-dir: ${{ secrets.FTP_SERVER_DIR || '' }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/Thumbs.db
+          **/.env*
+          **/package*.json
+          **/tailwind.config.js
+          **/input.css
+          **/README.md
+          **/.github/**
+          **/deploy-github.sh
 
 

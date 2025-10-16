@@ -34,6 +34,15 @@ jobs:
           exit 1
         fi
         
+        # Display deployment path information
+        FTP_SERVER_DIR="${{ secrets.FTP_SERVER_DIR }}"
+        if [ -z "$FTP_SERVER_DIR" ]; then
+          FTP_SERVER_DIR="./public_html/"
+        fi
+        
+        echo "📁 Deployment target directory: $FTP_SERVER_DIR"
+        echo "🌐 Full deployment path: ${{ secrets.FTP_SERVER }}$FTP_SERVER_DIR"
+        
         echo "✅ All required secrets are set"
         echo "valid=true" >> $GITHUB_OUTPUT
 

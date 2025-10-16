@@ -46,29 +46,20 @@ function initStickyDonationButton() {
     
     function handleScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const thankYouRect = thankYouSection.getBoundingClientRect();
-        const thankYouBottom = thankYouRect.bottom;
         
         // Get hero section (where donorbox is)
         const heroSection = document.getElementById('hero');
         const heroRect = heroSection.getBoundingClientRect();
         const heroBottom = heroRect.bottom;
         
-        // Get button position relative to viewport
-        const buttonRect = donateBtn.getBoundingClientRect();
-        const buttonTop = buttonRect.top;
-        
-        // Check if scrolling up
-        const isScrollingUp = scrollTop < lastScrollTop;
-        
-        // Make sticky when scrolling up past the thank-you section
-        if (isScrollingUp && scrollTop > thankYouBottom) {
+        // Show sticky button when hero section is not visible (scrolled past it)
+        if (heroBottom <= 0) {
             if (!isSticky) {
                 donateBtn.classList.add('sticky');
                 isSticky = true;
             }
-        } else if (scrollTop <= heroBottom + 100) {
-            // Remove sticky when scrolling back to the hero section
+        } else {
+            // Hide sticky button when hero section is visible
             if (isSticky) {
                 donateBtn.classList.remove('sticky');
                 isSticky = false;

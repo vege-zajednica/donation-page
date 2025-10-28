@@ -1,32 +1,6 @@
-// FAQ Toggle functionality
-function toggleFaq(questionElement) {
-    const answerElement = questionElement.nextElementSibling;
-    const arrowElement = questionElement.querySelector('.faq-arrow');
-    
-    if (answerElement.classList.contains('collapsed')) {
-        // Expand
-        answerElement.classList.remove('collapsed');
-        arrowElement.classList.remove('rotated');
-    } else {
-        // Collapse
-        answerElement.classList.add('collapsed');
-        arrowElement.classList.add('rotated');
-    }
-}
-
-// Initialize FAQ sections to be collapsed by default
+// Initialize sticky donation button on page load
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script loaded - version 20241201-001');
-    const faqAnswers = document.querySelectorAll('.faq-answer');
-    const faqArrows = document.querySelectorAll('.faq-arrow');
-    
-    faqAnswers.forEach(answer => {
-        answer.classList.add('collapsed');
-    });
-    
-    faqArrows.forEach(arrow => {
-        arrow.classList.add('rotated');
-    });
     
     // Initialize sticky donation button
     initStickyDonationButton();
